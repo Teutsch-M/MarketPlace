@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="#161616"
-    tools:context=".fragments.LoginFragment">
+    tools:context=".fragments.RegisterFragment">
 
 
     <LinearLayout
@@ -15,16 +15,17 @@
         android:layout_height="24dp"
         android:background="@drawable/Bazaar_logo_coloured"
         android:layout_marginBottom="36dp"
-
         >
 
     </LinearLayout>
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="#212121"
 
         >
 
@@ -32,31 +33,69 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:background="#212121"
+            android:layout_margin="40dp"
             >
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/log_in"
-                android:textColor="#EEEEEE"
+                android:text="@string/register"
+                android:textColor="@color/white"
                 android:textSize="16sp"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30.95dp"
+
                 />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="30.95dp"
-                android:textColorHint="@color/white"
-                app:helperText="Your email address"
-                app:helperTextTextColor="#EE3B02"
                 app:boxStrokeColor="#00B5C0"
+                android:textColorHint="#B2EEEEEE"
+                android:layout_marginBottom="35.75dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
 
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/first_name"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:autofillHints="name"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="#00B5C0"
+                android:textColorHint="#B2EEEEEE"
+                android:layout_marginBottom="35.75dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/last_name"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    android:autofillHints="name"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:boxStrokeColor="#00B5C0"
+                android:textColorHint="#B2EEEEEE"
+                android:layout_marginBottom="35.75dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
 
@@ -64,25 +103,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    android:autofillHints="emailAddress"
                     android:inputType="textEmailAddress"
-
+                    android:textSize="14sp"
+                    android:autofillHints="emailAddress"
                     />
 
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="14.95dp"
-                android:textColorHint="#B2EEEEEE"
                 app:boxStrokeColor="#00B5C0"
-
+                android:textColorHint="#B2EEEEEE"
+                android:layout_marginBottom="28.8dp"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 >
 
@@ -90,8 +125,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    android:autofillHints="password"
                     android:inputType="textPassword"
+                    android:textSize="14sp"
+                    android:autofillHints="password"
                     />
 
 
@@ -100,17 +136,14 @@
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginTop="28.8dp"
-                android:backgroundTint="#00B5C0"
-                android:text="@string/log_in"
-                android:textColor="@color/black"
-                android:textSize="12sp"
                 app:cornerRadius="26dp"
+                android:backgroundTint="#00B5C0"
+                android:text="@string/register"
+                android:textSize="12sp"
+                android:textColor="#212121"
+                android:layout_marginBottom="24dp"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 >
-
 
             </com.google.android.material.button.MaterialButton>
 
@@ -119,7 +152,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="16dp"
+                android:gravity="center"
                 android:weightSum="1"
 
                 >
@@ -127,65 +160,26 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/forgot_password"
+                    android:text="@string/already_have_an_account"
                     android:textColor="@color/white"
                     android:textSize="12sp"
-                    android:layout_weight="0.5"
+                    android:layout_weight="0.3"
                     android:gravity="end"
+                    android:layout_marginEnd="8dp"
                     />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/click_here"
+                    android:text="@string/log_in"
                     android:textColor="#00B5C0"
                     android:textSize="12sp"
-                    android:layout_weight="0.5"
-                    android:layout_marginStart="8dp"
+                    android:layout_weight="0.7"
 
                     />
 
+
             </LinearLayout>
-
-
-
-            <View
-                android:layout_width="247dp"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:background="#1FEEEEEE"
-                android:layout_marginTop="24dp"
-                />
-
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/new_to_bazaar"
-                android:textColor="#B2EEEEEE"
-                android:textSize="12sp"
-                android:gravity="center"
-                android:layout_marginTop="24dp"
-                />
-
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginEnd="41dp"
-                android:layout_marginTop="16dp"
-                app:strokeColor="@color/white"
-                android:text="@string/sign_up"
-                android:textColor="@color/white"
-                android:textSize="12sp"
-                app:cornerRadius="26dp"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                >
-
-
-            </com.google.android.material.button.MaterialButton>
 
 
 
@@ -193,8 +187,8 @@
         </LinearLayout>
 
 
+
+
     </androidx.cardview.widget.CardView>
-
-
 
 </LinearLayout>
