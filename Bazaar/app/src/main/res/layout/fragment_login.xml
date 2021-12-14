@@ -61,6 +61,7 @@
                 >
 
                 <EditText
+                    android:id="@+id/edittext_email_login_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
@@ -87,6 +88,7 @@
                 >
 
                 <EditText
+                    android:id="@+id/edittext_password_login_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
@@ -98,6 +100,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_login_login_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
@@ -135,6 +138,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/textview_forgotpassword_login_fragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/click_here"
@@ -171,6 +175,7 @@
 
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_signup_login_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
